@@ -1,0 +1,16 @@
+
+<section>
+  <h2 class="transform">Items</h2>
+
+  <div class="itemsContainer">
+    <div class="item" *ngFor="let item of items">
+      <div class="cover" [ngStyle]="{'background-image': 'url('+ item.image +')'}"></div>
+     <div class="content">
+      <h3>{{item.name}}</h3>
+      <a [routerLink]="[ '/item', item._id ]">Check Item</a>
+    </div>
+    </div>    
+  </div>
+
+
+</section>
